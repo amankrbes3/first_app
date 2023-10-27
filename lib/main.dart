@@ -74,6 +74,11 @@ class _MyHomePageState extends State<MyHomePage> {
       }
     });
   }
+  void _restCounter(){
+    setState(() {
+      _counter = 0;
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -128,12 +133,19 @@ class _MyHomePageState extends State<MyHomePage> {
                   child: const Icon(Icons.remove),
                 ),
                 FloatingActionButton(
-
                   onPressed: _incrementCounter,
                   tooltip: 'Increment',
                   child: const Icon(Icons.add),
                 ),
-                const MyCustomGradient(),
+                Center(
+                  child: ElevatedButton(
+                    onPressed: _restCounter,
+                    style:ElevatedButton.styleFrom(
+                      foregroundColor: Colors.black,
+                    ),
+                    child: const Text("Reset"),
+                  ),
+                ),
               ],
             )
           ],
