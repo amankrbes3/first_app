@@ -9,6 +9,10 @@ class MyCustomGradient extends StatelessWidget{
    return Center(
      child: ElevatedButton(
        onPressed: () {  },
+       style:ElevatedButton.styleFrom(
+         foregroundColor: Colors.blueAccent,
+         backgroundColor: Colors.black,
+       ),
        child: const Text("Click Me"),
      ),
    );
